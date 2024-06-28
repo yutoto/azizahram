@@ -28,10 +28,10 @@ if __name__ == '__main__' :
 
 st.table([x for x in range(1,5)])
   
-  click_me_btn = st.button('Click Me')
+click_me_btn = st.button('Click Me')
   st.write(click_me_btn) #Return True kalo di Click 
   check_btn = st.checkbox('Klik Jika Setuju')
-  if check_btn :
+if check_btn :
       st.write('Anda Setuju')
   
   radio_button= st.radio('Choose below',[x for x in range(1,3)])
