@@ -114,5 +114,5 @@ with col3:
 #else:
     #st.write("Tidak ada konten untuk ditampilkan.")
   
-if __name__ == '__main__' : 
-  main()
+if __name__ == '__main__' :
+    main()
