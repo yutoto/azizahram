@@ -13,5 +13,9 @@ def main() :
     st.write('Some Pyhtagorean Equation : ')
     st.latex('c^2 = a^2+b^2')
 
-if __name__ == '__main__' :
+if _name_ == '_main_' :
+    main()
+
+ st.dataframe(house)
+if _name_ == '_main_' : 
     main()
