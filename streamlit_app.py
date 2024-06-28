@@ -93,24 +93,26 @@ tab2.write("this is tab 2")
 with tab1:
    st.radio("Select one:", [1, 2])
 
-# SHow and update progress bar
-bar = st.progress(50)
-time.sleep(3)
-bar.progress(100)
+st.line_chart(house)
 
-with st.status("Authenticaring...") as s:
-    time.sleep(2)
-    st.write("Some long response.")
-    s.update(label="Response")
+#Membuat sidebar
+st.sidebar.title("Sidebar")
+input_text = st.sidebar.text_input("Masukkan sesuatu:")
+input_number = st.sidebar.number_input("Masukkan angka:", min_value=0, max_value=100)
 
-st.balloons()
-st.snow()
-st.toast("Warming up...")
-st.error("Error message")
-st.warning("Warning message")
-st.info("Info message")
-st.success("Success message")
-st.exception(e)
+#Tombol untuk memindahkan konten
+if st.sidebar.button("Tampilkan di Mainbar")
+   st.session_state['show_content'] = True
+else:
+   st.session_state['show_content'] = False
 
-if __name__ == '__main__' :
+#Menampilkan hasil di mainbar
+st.title("Mainbar")
+if 'show_content' in st.session_state and st.session_state['show_content']:
+    st.write(f"Teks dari sidebar: {input_text}")
+    st.write(f"Angka dari sidebar: {input_number}")
+else:
+    st.write("Tidak ada konten untuk ditampilkan.")
+  
+if __name__ == '__main__' : 
   main()
