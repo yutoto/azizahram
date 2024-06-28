@@ -99,9 +99,9 @@ time.sleep(3)
 bar.progress(100)
 
 with st.status("Authenticaring...") as s:
-      time.sleep(2)
-      st.write("Some long response.")
-      s.update(label="Response")
+    time.sleep(2)
+    st.write("Some long response.")
+    s.update(label="Response")
 
 st.balloons()
 st.snow()
