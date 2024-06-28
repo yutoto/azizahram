@@ -1,4 +1,10 @@
 import streamlit as st
+import pandas as pd
+#import requests
+#from st_anggrid import AgGrid
+
+house = pd.read_csv('house_clean.csv')
+
 
 def main() :
     st.write('Halaman Streamlit Azizah')
