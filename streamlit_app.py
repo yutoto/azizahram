@@ -3,7 +3,7 @@ import pandas as pd
 #import requests
 #from st_anggrid import AgGrid
 
-house = pd.read_csv('house_clean.csv')
+house = pd.read_csv('house_clean.csv', usecols=['id', 'price'])
 
 
 def main() :
@@ -22,9 +22,9 @@ def main() :
 if __name__ == '__main__' : 
     main()
 
- # Untuk menampilkan Grid -- masih blm tampil
-    #st.write('Menampilkan Dataframe dengan St AgGrid')
-    #AgGrid(house)
+# Untuk menampilkan Grid -- masih blm tampil
+st.write('Menampilkan Dataframe dengan St AgGrid')
+#AgGrid(house)
 
 st.table([x for x in range(1,5)])
   
@@ -96,7 +96,7 @@ with col3:
 #st.line_chart(house)
 
 #Membuat sidebar
-st.sidebar.title("Sidebar")
+#st.sidebar.title("Sidebar")
 #input_text = st.sidebar.text_input("Masukkan sesuatu:")
 #input_number = st.sidebar.number_input("Masukkan angka:", min_value=0, max_value=100)
 
