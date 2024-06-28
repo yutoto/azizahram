@@ -101,7 +101,7 @@ input_text = st.sidebar.text_input("Masukkan sesuatu:")
 input_number = st.sidebar.number_input("Masukkan angka:", min_value=0, max_value=100)
 
 #Tombol untuk memindahkan konten
-if st.sidebar.button("Tampilkan di Mainbar")
+if st.sidebar.button("Tampilkan di Mainbar"):
    st.session_state['show_content'] = True
 else:
    st.session_state['show_content'] = False
