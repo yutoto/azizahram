@@ -45,5 +45,75 @@ st.write('Usia Anda',age_slider)
 num_input = st.number_input('Input Berapapun')
 st.write('Kuadrat dari {} adalah {}'.format(num_input,num_input**2))
       
+#Menampilkan menu sidebar 
+sidebar_checkbox = st.sidebar.checkbox('Checkbox di Sidebar')
+sidebar_radio_button = st.sidebar.radio('Pilih Menu',options=['A','B','C'])
+
+#columns :
+col1, col2, col3 = st.columns([1, 2, 1])
+
+with col1:
+    st.header("A cat")
+    st.image("https://static.streamlit.io/examples/cat.jpg")
+#atau dengan assignment 
+#image_col1 = col1.image("https://static.streamlit.io/examples/cat.jpg")
+
+with col2:
+    st.header("A dog")
+    st.image("https://static.streamlit.io/examples/dog.jpg")
+
+with col3:
+    st.header("An owl")
+    st.image("https://static.streamlit.io/examples/owl.jpg")
+  
+#expander 
+#dengan with atau dengan assignment 
+expander = st.expander("Klik Untuk Detail ")
+expander.write('Anda Telah Membuka Detail')
+
+#sidebar 
+with st.form("Data Diri"):
+    st.write("Area di dalam form")
+    slider_val = st.slider("Pilih Angka")
+    checkbox_val = st.checkbox("Setuju")
+
+    #Every form must have a submit button.
+     submitted = st.form_submit_button("Simpan")
+     if submitted:
+         st.write("Angka dipilih", slider_val, "checkbox", checkbox_val)
+
+st.write("Area di luar form")
+
+# Insert containers separated into tabs:
+tab1, tab2 = st.tabs(["Tab 1", "Tab2"])
+tab1.write("this is tab 1")
+tab2.write("this is tab 2")
+
+# You can also use "with" notation:
+with tab1:
+   st.radio("Select one:", [1, 2])
+
+# SHow and update progress bar
+bar = st.progress(50)
+time.sleep(3)
+bar.progress(100)
+
+with st.status("Authenticaring...") as s:
+      time.sleep(2)
+      st.write("Some long response.")
+      s.update(label="Response")
+
+st.balloons()
+st.snow()
+st.toast("Warming up...")
+st.error("Error message")
+st.warning("Warning message")
+st.info("Info message")
+st.success("Success message")
+st.exception(e)
+
+if __name__ = '__main__' :
+  main()
+
 if __name__ == '__main__' : 
   main()
