@@ -78,8 +78,8 @@ with st.form("Data Diri"):
     checkbox_val = st.checkbox("Setuju")
 
     #Every form must have a submit button.
-     submitted = st.form_submit_button("Simpan")
-     if submitted:
+    submitted = st.form_submit_button("Simpan")
+    if submitted:
          st.write("Angka dipilih", slider_val, "checkbox", checkbox_val)
 
 st.write("Area di luar form")
@@ -113,7 +113,4 @@ st.success("Success message")
 st.exception(e)
 
 if __name__ = '__main__' :
-  main()
-
-if __name__ == '__main__' : 
   main()
